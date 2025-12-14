@@ -17,15 +17,15 @@ sudo pip3 install meson mako jinja2 ply pyyaml dataclasses
 
 ```
 repo init -u https://android.googlesource.com/platform/manifest -b android-16.0.0_r3
-curl -o .repo/local_manifests/manifest_rk_opi.xml -L https://raw.githubusercontent.com/dvab-sarma/android_local_manifest/android-16.0_r3/manifest_rk_opi.xml --create-dirs
+curl -o .repo/local_manifests/manifest_rk_opi.xml -L https://raw.githubusercontent.com/iamthecage/android_local_manifest/android-16.0_r3/manifest_rk_opi.xml --create-dirs
 ```
 
 Or optionally, you can reduce download size by creating a shallow clone and removing unneeded projects:
 
 ```
 repo init -u https://android.googlesource.com/platform/manifest -b android-16.0.0_r3 --depth=1
-curl -o .repo/local_manifests/manifest_rk_opi.xml -L https://raw.githubusercontent.com/dvab-sarma/android_local_manifest/android-16.0_r3/manifest_rk_opi.xml --create-dirs
-curl -o .repo/local_manifests/remove_projects.xml -L https://raw.githubusercontent.com/dvab-sarma/android_local_manifest/android-16.0_r3/remove_projects.xml
+curl -o .repo/local_manifests/manifest_rk_opi.xml -L https://raw.githubusercontent.com/iamthecage/android_local_manifest/android-16.0_r3/manifest_rk_opi.xml --create-dirs
+curl -o .repo/local_manifests/remove_projects.xml -L https://raw.githubusercontent.com/iamthecage/android_local_manifest/android-16.0_r3/remove_projects.xml
 ```
 
 4. Sync source code:
@@ -110,5 +110,6 @@ The rockchip drm was patched in this kernel attached in this github.  So, it is 
 **Credits:**
 - The android userspace code is based on KonstaKang's raspberry-vanilla aosp project. A huge thanks to KonstaKang and raspberry-vanilla team.
 - A huge thanks to Masayuki Araki ([Misaka](https://github.com/misakazip)) for his contribution in developing and testing  this build for Orange Pi 5.
+
 
 
